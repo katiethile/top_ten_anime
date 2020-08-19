@@ -1,8 +1,6 @@
 # TopTenAnime
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/top_ten_anime`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is a CLI app designed to see the top ten anime in the myanimelist website, also able to check their sypnosis as well as their reviews!
 
 ## Installation
 

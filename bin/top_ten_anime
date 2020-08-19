@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-puts "hi!"
+require_relative '../lib/top_ten_anime/'
+
+TopTenAnime::CLI.new.call 

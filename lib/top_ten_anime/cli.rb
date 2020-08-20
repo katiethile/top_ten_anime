@@ -21,7 +21,4 @@ end
 #       9. No Game No Life (8.26 score)
 #       10. Naruto (7.88 score)
 #     DOC 
-#   end 
-# end 
-# end 
 end 

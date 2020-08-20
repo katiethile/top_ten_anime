@@ -2,13 +2,14 @@ require 'pry'
 
 class TopTenAnime::CLI 
   def call 
-    puts "Welcome to MyAnimeList!"
+    #puts "Welcome to MyAnimeList!"
+    list_anime_ranks
   end 
 end 
   
   def list_anime_ranks
     binding.pry
-#     puts "The top 10 anime of all time:"
+     puts "The top 10 anime of all time:"
 #     puts <<-DOC.gsub /^\s*/, ''
 #       1. Death Note (8.63 score)
 #       2. Shingeki no Kyojin (8.44 score)

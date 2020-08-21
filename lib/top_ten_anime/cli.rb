@@ -3,13 +3,13 @@ require 'pry'
 class TopTenAnime::CLI 
   def call 
     puts "Welcome to MyAnimeList!"
-  get_anime_ranks
+  enter
   list_anime_ranks
   get_user_anime
   end 
 end 
   
-  def get_anime_ranks
+  def enter
     #binding.pry
      puts "" 
      puts "The top 10 anime of all time:"
@@ -36,11 +36,21 @@ end
         puts "What anime would you like more information on?"
         input = gets.strip 
         
-        # restaurant = TopTenAnime::Anime.find(input.to_i)
+        # anime = TopTenAnime::Anime.find(input.to_i)
         # print_anime(anime)
-
         puts ""
-        puts "Would you like to see/click on another anime? Yes or No"
-        input = gets.strip 
+        puts "Would you like to see/click on another anime? Enter Y or N"
+        input = gets.strip.downcase 
         #binding.pry
-      end 
+        
+        if input == y 
+          enter 
+        elsif input == n 
+          puts ""
+          puts "Thank you, see you next time!"
+        else 
+          puts ""
+          puts "Answer not understood"
+          enter
+      end
+  end

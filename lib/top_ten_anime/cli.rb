@@ -27,14 +27,13 @@ class TopTenAnime::CLI
     puts "What anime would you like more information on? From 1-10"
     input = gets.strip.to_i
     print_info(input)
-    #print_anime(anime)
     
     puts ""
     puts "Would you like to see another anime? Enter Y or N"
 
     input = gets.strip.downcase
     if input == "y"
-      enter 
+      get_user_anime 
     elsif input == "n"
       puts ""
       puts "Thank you! See you next time!"
@@ -43,9 +42,9 @@ class TopTenAnime::CLI
       puts ""
       puts "Sorry, I don't quite understand that answer."
       enter
+      end
     end
-  end
-  end
+  end 
    def print_animes(input)
      puts @anime_ranks[input - 1]
    end

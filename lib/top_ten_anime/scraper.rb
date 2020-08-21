@@ -1,9 +1,13 @@
 #require 'pry'
 
 class TopTenAnime::Scraper
-  def self.get_page
+  def get_rank
      binding.pry
-    Nokogiri::HTML(open("https://myanimelist.net/topanime.php?type=bypopularity"))
-    binding.pry
+    Nokogiri::HTML(open("https://www.anime-planet.com/anime/top-anime"))
+   # binding.pry
   end
+  
+  def scrape_anime_ranks
+    self.get_rank.css("")
+  end 
 end 

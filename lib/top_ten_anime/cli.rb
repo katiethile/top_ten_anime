@@ -2,7 +2,7 @@ class TopTenAnime::CLI
   def call
     puts "Welcome to Anime Planet!"
     enter
-    #TopTenAnime::Scraper.get_rank
+    TopTenAnime::Scraper.scrape_anime_ranks
     list_anime_ranks
     get_user_anime
   end

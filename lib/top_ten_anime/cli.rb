@@ -24,7 +24,23 @@ end
       end 
       
       def get_user_anime
-        binding.pry
-        chosen_anime = gets.strip 
+        #binding.pry 
+        puts ""
+        puts "What anime would you like to click on/see? From 1-10."
+        input = gets.strip.to_i
+      
+        
+       # print_animes(input)
+       
+        puts ""
+        puts "What anime would you like more information on?"
+        input = gets.strip 
+        
+        # restaurant = TopTenAnime::Anime.find(input.to_i)
+        # print_anime(anime)
+
+        puts ""
+        puts "Would you like to see/click on another anime? Yes or No"
+        input = gets.strip 
+        #binding.pry
       end 
-    end 

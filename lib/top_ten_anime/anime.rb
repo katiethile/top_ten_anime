@@ -1,4 +1,4 @@
-class WorldsBestRestaurants::Anime
+class TopTenAnime::Anime
   attr_accessor :rank, :anime_review
   attr_reader :anime_name, :sypnosis
   

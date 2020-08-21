@@ -5,6 +5,7 @@ class TopTenAnime::Anime
   @@all = []
   
   def initialize(anime_name, sypnosis)
+    #binding.pry 
     @anime_name = anime_name
     @sypnosis = sypnosis
     @@all << self 

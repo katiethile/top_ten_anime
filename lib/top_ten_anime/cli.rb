@@ -1,9 +1,10 @@
 class TopTenAnime::CLI
   def call
-    puts "Welcome to MyAnimeList!"
+    puts "Welcome to Anime Planet"
     enter
     list_anime_ranks
     get_user_anime
+    get_page
   end
   def enter
     #binding.pry

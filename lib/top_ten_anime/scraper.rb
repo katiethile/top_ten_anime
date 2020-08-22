@@ -14,9 +14,12 @@
 
 class TopTenAnime::Scraper 
   def self.scrape_anime_ranks
-   # binding.pry
-  doc = Nokogiri::HTML(open("https://www.anime-planet.com/anime/top-anime"))
-  section = website.css("td.tableTitle").text #anime title 
-  section = website.css("td.tableRank").text #anime rank 
+   # binding.
+   url = "https://www.anime-planet.com/anime/top-anime"
+  website = Nokogiri::HTML(open(url))
+  section = website.css
+  animes = section.css("tr")
+  #anime_title = section.css("td.tableTitle").text #anime title 
+  #anime_rank = section.css("td.tableRank").text #anime rank 
 end 
 end 

@@ -59,7 +59,7 @@ class TopTenAnime::CLI
    
    def print_anime(anime)
      puts ""
-     puts "----------- #{anime.name} - #{anime.rank} -----------"
+     puts "----------- #{anime.title} - #{anime.rank} -----------"
      puts ""
      puts "#{anime.heading}"
      puts ""

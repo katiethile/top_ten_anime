@@ -8,8 +8,7 @@ class TopTenAnime::Scraper
       title = row.css("td.tableTitle").text 
       rank = row.css("td.tableRank").text 
       
-      newanime = Anime.new
-      newanime.title = title 
+      newanime = Anime.new(title)
       newanime.rank = rank 
     end 
   end 

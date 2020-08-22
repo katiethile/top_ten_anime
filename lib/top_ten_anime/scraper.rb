@@ -10,16 +10,8 @@ class TopTenAnime::Scraper
     title = row.css("td.tableTitle").text
     TopTenAnime::Anime.new(title,rank)
     end 
+   # binding.pry
   end 
 end 
 
-    # rank = section.css("td.tableRank").text 
-    # title = section.css("td.tableTitle").text 
-    
-#   Nokogiri::HTML(open("https://www.anime-planet.com/anime/top-anime"))
-  
-#   rank = doc.css("tr.tableRank").each do |rank|
-#     rank.text 
-#   end 
-# end
-# end
+#TopTenAnime::Anime.all 

@@ -13,7 +13,9 @@ class TopTenAnime::CLI
     #binding.pry
     puts ""
     puts "The top 10 anime of all time:"
-    @anime_ranks = ["1. Fullmetal Alchemist: Brotherhood (4.7 score)", "2. Haikyuu!! Karasuno High School vs Shiratorizawa Academy (4.7 score)", "3. your name. (4.7 score)", "4. A Silent Voice (4.7 score)", "5. Attack on Titan 3rd Season: Part II (4.6 score)", "6. Haikyuu!! Second Season (4.6 score)", "7. Hunter x Hunter (2011) (4.6 score)", "8. Demon Slayer: Kimetsu no Yaiba (4.6 score)", "9. Gintama Kanketsu-hen: Yorozuya yo Eien Nare (4.6 score)", "10. Gintama (2015) (4.6 score)"]
+    #@anime_ranks = ["1. Fullmetal Alchemist: Brotherhood (4.7 score)", "2. Haikyuu!! Karasuno High School vs #Shiratorizawa Academy (4.7 score)", "3. your name. (4.7 score)", "4. A Silent Voice (4.7 score)", "5. #Attack on Titan 3rd Season: Part II (4.6 score)", "6. Haikyuu!! Second Season (4.6 score)", "7. Hunter x #Hunter (2011) (4.6 score)", "8. Demon Slayer: Kimetsu no Yaiba (4.6 score)", "9. Gintama Kanketsu-hen: #Yorozuya yo Eien Nare (4.6 score)", "10. Gintama (2015) (4.6 score)"]
+    TopTenAnime::Anime.all.each { |obj| puts obj.name }
+    
   end
   def list_anime_ranks
     #binding.pry
@@ -30,6 +32,8 @@ class TopTenAnime::CLI
     puts ""
     puts "What anime would you like more information on? From 1-10"
     input = gets.strip.to_i
+    
+    #print_anime(anime)
     print_info(input)
     
     puts ""

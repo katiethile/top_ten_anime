@@ -3,8 +3,11 @@ class TopTenAnime::CLI
     puts "Welcome to Anime Planet!"
     enter
    # TopTenAnime::Scraper.scrape_anime_ranks
+   TopTenAnime::Scraper.get_page 
     list_anime_ranks
+    enter 
     get_user_anime
+    print_anime(anime)
   end
   def enter
     #binding.pry

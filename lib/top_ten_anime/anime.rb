@@ -1,5 +1,5 @@
 class TopTenAnime::Anime
-  attr_accessor :rank, :anime_review, :anime_name, :sypnosis
+  attr_accessor :rank, :review, :name, :synopsis
   
   @@all = []
   

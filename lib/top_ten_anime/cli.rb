@@ -53,3 +53,20 @@ class TopTenAnime::CLI
    def print_info(input)
      puts @anime_ranks[input -1]
    end 
+   
+   def print_anime(anime)
+     puts ""
+     puts "----------- #{anime.name} - #{anime.position} -----------"
+     puts ""
+     puts "#{anime.heading}"
+     puts ""
+     puts "---------------Summary/Synopsis--------------"
+     puts ""
+     puts "#{anime.synopsis}"
+     puts ""
+     
+     puts ""
+     puts "---------------Reviews-------------"
+     puts ""
+     puts "#{anime.reviews}"
+   end 

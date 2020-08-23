@@ -11,11 +11,11 @@ class TopTenAnime::Anime
   end 
   
   def self.find_by_name(title)
-    @@all.detect { |obj| obj.title == title}
+    @@all.detect { |anime| anime.title == title}
   end
   
   def self.find_by_rank(rank)
-    @@all.detect { |obj| obj.rank == rank}
+    @@all.detect { |anime| anime.rank == rank}
+  end 
  end 
-end
 

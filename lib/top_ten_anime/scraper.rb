@@ -12,6 +12,12 @@ class TopTenAnime::Scraper
     end 
    # binding.pry
   end 
+  
+  def self.get_synopsis
+    url = "https://www.anime-planet.com/anime/fullmetal-alchemist-brotherhood"
+    website = Nokogiri::HTML(open(url))
+    puts website.css("div.pure-1.md-3-5 p").text
+  end 
 end 
 
 #TopTenAnime::Anime.all 

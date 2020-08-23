@@ -21,6 +21,7 @@ class TopTenAnime::CLI
     puts "What anime would you like more information on? From 1-10"
     input = gets.strip.to_i
     puts TopTenAnime::Anime.all[input - 1].title
+    TopTenAnime::Scraper.get_synopsis
    
     puts ""
     puts "Would you like to see another anime? Enter Y or N"
@@ -59,4 +60,5 @@ class TopTenAnime::CLI
      puts ""
      puts "#{anime.reviews}"
    end 
-  end 
+ end 
+ end 

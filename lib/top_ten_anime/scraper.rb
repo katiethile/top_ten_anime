@@ -19,13 +19,9 @@ class TopTenAnime::Scraper
   def self.get_synopsis(link)
     url = "https://www.anime-planet.com#{link}"
     website = Nokogiri::HTML(open(url))
+    doc = Nokogiri::HTML(open(url))
     puts website.css("div.pure-1.md-3-5 p").text
-  end 
-  
-  def self.get_reviews(link)
-    url = "https://www.anime-planet.com#{link}"
-    website = Nokogiri::HTML(open(url))
-    puts website.css("section.pure-g.pure-gutter--15").text.strip 
+    puts doc.css("section.pure-g.pure-gutter--15").text.strip 
   end 
 end 
 

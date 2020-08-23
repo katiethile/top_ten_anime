@@ -8,7 +8,7 @@ class TopTenAnime::Scraper
     animes.collect do |row|
       rank = row.css("td.tableRank").text
     title = row.css("td.tableTitle").text
-    TopTenAnime::Anime.new(title,rank)
+    TopTenAnime::Anime.new(title,rank) unless title == ""
     end 
    # binding.pry
   end 

@@ -20,7 +20,7 @@ class TopTenAnime::CLI
     puts ""
     puts "What anime would you like more information on? From 1-10"
     input = gets.strip.to_i
-    TopTenAnime::Anime.all[input - 1]
+    puts TopTenAnime::Anime.all[input - 1]
   end 
     # puts ""
     # puts "Would you like to see another anime? Enter Y or N"

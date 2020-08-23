@@ -4,37 +4,31 @@ class TopTenAnime::CLI
     enter
    # TopTenAnime::Scraper.scrape_anime_ranks
    TopTenAnime::Scraper.get_page 
-    list_anime_ranks
     enter 
     get_user_anime
     print_anime(anime)
   end
   def enter
-    #binding.pry
+   # binding.pry
     puts ""
     puts "The top 10 anime of all time:"
-    @anime_ranks = ["1. Fullmetal Alchemist: Brotherhood (4.7 score)", "2. Haikyuu!! Karasuno High School vs #Shiratorizawa Academy (4.7 score)", "3. your name. (4.7 score)", "4. A Silent Voice (4.7 score)", "5. #Attack on Titan 3rd Season: Part II (4.6 score)", "6. Haikyuu!! Second Season (4.6 score)", "7. Hunter x #Hunter (2011) (4.6 score)", "8. Demon Slayer: Kimetsu no Yaiba (4.6 score)", "9. Gintama Kanketsu-hen: #Yorozuya yo Eien Nare (4.6 score)", "10. Gintama (2015) (4.6 score)"]
-    #TopTenAnime::Anime.all.each { |obj| puts obj.name }
+    #TopTenAnime::Anime.all.each { |obj| puts obj.title }
+  end 
     
-  end
-  def list_anime_ranks
-    #binding.pry
-    @anime_ranks.each do |anime|
-      puts anime
+   def list_anime_ranks
+    #binding.pry 
+      TopTenAnime::Anime.all.each { |obj| puts "#{obj.rank}. #{obj.title}" }  
     end
-  end
+  
   def get_user_anime
     #binding.pry
     puts ""
     puts "What anime would you like to click on/see? From 1-10."
     input = gets.strip.to_i
-    print_animes(input)
+   # print_animes(input)
     puts ""
     puts "What anime would you like more information on? From 1-10"
     input = gets.strip.to_i
-    
-    #print_anime(anime)
-    print_info(input)
     
     puts ""
     puts "Would you like to see another anime? Enter Y or N"
@@ -51,11 +45,7 @@ class TopTenAnime::CLI
       puts "Sorry, I don't quite understand that answer."
       enter
       end
-    end
-  end 
-   def print_animes(input)
-     puts @anime_ranks[input - 1]
-   end
+
    
    def print_info(input)
      puts @anime_ranks[input -1]
@@ -77,3 +67,4 @@ class TopTenAnime::CLI
      puts ""
      puts "#{anime.reviews}"
    end 
+ end 

@@ -1,6 +1,6 @@
 # TopTenAnime
 
-This is a CLI app designed to see the top ten anime in the myanimelist website, also able to check their sypnosis as well as their reviews!
+This is a CLI app designed to see the top ten anime in the myanimelist website, also able to check their sypnosis!
 
 ## Installation
 

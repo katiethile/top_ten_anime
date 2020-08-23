@@ -12,7 +12,7 @@ class TopTenAnime::Scraper
        TopTenAnime::Anime.new(title,rank,link)
       end
   end 
-   binding.pry
+  binding.pry 
   end 
   
   def self.get_synopsis(link)
@@ -23,3 +23,5 @@ class TopTenAnime::Scraper
 end 
 
 #TopTenAnime::Anime.all 
+#TopTenAnime::Anime.all[1]
+#TopTenAnime::Anime.all[0].link

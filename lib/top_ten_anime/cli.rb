@@ -10,20 +10,16 @@ class TopTenAnime::CLI
    # binding.pry
     puts ""
     puts "The top 10 anime of all time:"
-    #TopTenAnime::Anime.all.each { |obj| puts obj.title }
   end 
     
    def list_anime_ranks
-    #binding.pry 
       TopTenAnime::Anime.all.each { |obj| puts "#{obj.rank}. #{obj.title}" }  
     end
   
   def get_user_anime
-    #binding.pry
     puts ""
     puts "What anime would you like to click on/see? From 1-10."
     input = gets.strip.to_i
-   # print_animes(input)
     puts ""
     puts "What anime would you like more information on? From 1-10"
     input = gets.strip.to_i

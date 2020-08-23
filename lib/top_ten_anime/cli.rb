@@ -20,23 +20,23 @@ class TopTenAnime::CLI
     puts ""
     puts "What anime would you like more information on? From 1-10"
     input = gets.strip.to_i
-    puts TopTenAnime::Anime.all[input - 1]
-  end 
-    # puts ""
-    # puts "Would you like to see another anime? Enter Y or N"
+    puts TopTenAnime::Anime.all[input - 1].title
+   
+    puts ""
+    puts "Would you like to see another anime? Enter Y or N"
 
-    # input = gets.strip.downcase
-    # if input == "y"
-    #   get_user_anime 
-    # elsif input == "n"
-    #   puts ""
-    #   puts "Thank you! See you next time!"
-    #   exit
-    # else
-    #   puts ""
-    #   puts "Sorry, I don't quite understand that answer."
-    #   enter
-    #   end
+    input = gets.strip.downcase
+    if input == "y"
+      get_user_anime 
+    elsif input == "n"
+      puts ""
+      puts "Thank you! See you next time!"
+      exit
+    else
+      puts ""
+      puts "Sorry, I don't quite understand that answer."
+      enter
+      end
 
    
    def print_info(input)

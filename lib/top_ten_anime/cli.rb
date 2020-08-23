@@ -1,13 +1,11 @@
 class TopTenAnime::CLI
   def call
-    puts "Welcome to Anime Planet!"
-    enter
-   # TopTenAnime::Scraper.scrape_anime_ranks
-   TopTenAnime::Scraper.get_page 
-    enter 
-    get_user_anime
-    print_anime(anime)
+  TopTenAnime::Scraper.get_page
+  puts "Welcome to Anime Planet!"
+  enter
+  list_anime_ranks
   end
+  
   def enter
    # binding.pry
     puts ""
@@ -67,4 +65,5 @@ class TopTenAnime::CLI
      puts ""
      puts "#{anime.reviews}"
    end 
+ end 
  end 

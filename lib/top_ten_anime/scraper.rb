@@ -9,7 +9,8 @@ class TopTenAnime::Scraper
       title = row.css("td.tableTitle").text
       if title != ''
        link = row.css("td.tableTitle a").attribute('href').text
-       TopTenAnime::Anime.new(title,rank,link)
+       review = row.css("section.pure-g.pure-gutter--15").text.strip 
+       TopTenAnime::Anime.new(title,rank,link,review)
       end
   end 
   #binding.pry 
@@ -19,6 +20,12 @@ class TopTenAnime::Scraper
     url = "https://www.anime-planet.com#{link}"
     website = Nokogiri::HTML(open(url))
     puts website.css("div.pure-1.md-3-5 p").text
+  end 
+  
+  def self.get_reviews(link)
+    url = "https://www.anime-planet.com#{link}"
+    website = Nokogiri::HTML(open(url))
+    puts website.css("section.pure-g.pure-gutter--15").text.strip 
   end 
 end 
 

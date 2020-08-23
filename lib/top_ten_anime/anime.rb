@@ -1,10 +1,11 @@
 class TopTenAnime::Anime
-  attr_accessor :title, :rank, :link
+  attr_accessor :title, :rank, :link, :review
   @@all = []
-   def initialize(title, rank, link)
+   def initialize(title, rank, link, review)
     @title = title
     @rank = rank
     @link = link
+    @review = review 
     @@all << self 
   end 
   def self.all 

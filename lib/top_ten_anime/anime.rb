@@ -10,10 +10,12 @@ class TopTenAnime::Anime
     @@all 
   end 
   
-  def self.find_by_name(name)
-    @@all.detect { |obj| obj.name == name}
+  def self.find_by_name(title)
+    @@all.detect { |obj| obj.title == title}
   end
   
- 
+  def self.find_by_rank(rank)
+    @@all.detect { |obj| obj.rank == rank}
+ end 
 end
 

@@ -4,6 +4,7 @@ class TopTenAnime::CLI
   puts "Welcome to Anime Planet!"
   enter
   list_anime_ranks
+  get_user_anime
   end
   
   def enter
@@ -16,9 +17,6 @@ class TopTenAnime::CLI
     end
   
   def get_user_anime
-    puts ""
-    puts "What anime would you like to click on/see? From 1-10."
-    input = gets.strip.to_i
     puts ""
     puts "What anime would you like more information on? From 1-10"
     input = gets.strip.to_i

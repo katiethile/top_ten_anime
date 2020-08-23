@@ -7,13 +7,12 @@ class TopTenAnime::CLI
   end
   
   def enter
-   # binding.pry
     puts ""
     puts "The top 10 anime of all time:"
   end 
     
    def list_anime_ranks
-      TopTenAnime::Anime.all.each { |obj| puts "#{obj.rank}. #{obj.title}" }  
+      TopTenAnime::Anime.all.each_with_index{ |obj,index| puts "#{obj.rank}. #{obj.title}" if index < 11}  
     end
   
   def get_user_anime

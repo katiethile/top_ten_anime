@@ -43,7 +43,6 @@ class TopTenAnime::CLI
     else
       puts ""
       puts "Sorry, I don't quite understand that answer."
-      enter
       end
   end 
  end 

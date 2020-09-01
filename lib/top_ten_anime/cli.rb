@@ -1,9 +1,9 @@
 class TopTenAnime::CLI
   def call
-  TopTenAnime::Scraper.get_page
-  puts "Welcome to Anime Planet!"
-  enter
-  get_user_anime
+    TopTenAnime::Scraper.get_page
+    puts "Welcome to Anime Planet!"
+    enter
+    get_user_anime
   end
   
   def enter
@@ -11,9 +11,9 @@ class TopTenAnime::CLI
     puts "The top 10 anime of all time:"
   end 
     
-   def list_anime_ranks
-      TopTenAnime::Anime.all.each_with_index{ |obj,index| puts "#{obj.rank}. #{obj.title}" if index < 10}  
-    end
+  def list_anime_ranks
+    TopTenAnime::Anime.all.each_with_index{ |obj,index| puts "#{obj.rank}. #{obj.title}" if index < 10}  
+  end
   
   def get_user_anime
     list_anime_ranks
@@ -44,5 +44,5 @@ class TopTenAnime::CLI
       puts ""
       puts "Sorry, I don't quite understand that answer."
       end
-  end 
+    end 
  end 

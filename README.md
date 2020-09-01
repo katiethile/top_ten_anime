@@ -1,6 +1,6 @@
 # TopTenAnime
 
-This is a CLI app designed to see the top ten anime in the anime-planet.com website, also able to check their sypnosis and reviews when inputting what anime the user would like to see!
+This is a CLI app designed to see the top ten anime in the anime-planet.com website, also able to check their sypnosis and user reviews when inputting what anime the user would like more information on!
 
 ## Installation
 

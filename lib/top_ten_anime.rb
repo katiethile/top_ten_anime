@@ -8,7 +8,3 @@ require 'nokogiri'
 require 'open-uri'
 require 'pry'
 require 'httparty'
-module TopTenAnime
-  class Error < StandardError; end
-  # Your code goes here...
-end

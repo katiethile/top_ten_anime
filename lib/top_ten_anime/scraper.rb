@@ -9,16 +9,13 @@ class TopTenAnime::Scraper
       if title != ''
         link = row.css("td.tableTitle a").attribute('href').text
         TopTenAnime::Anime.new(title,rank,link)
-        #binding.pry
       end
     end
-    #binding.pry
   end
   
   def self.get_synopsis(link)
     url = "https://www.anime-planet.com#{link}"
     website = Nokogiri::HTML(open(url))
-    #doc = Nokogiri::HTML(open(url))
     puts website.css("div.pure-1.md-3-5 p").text
   end
   

@@ -9,6 +9,7 @@ class TopTenAnime::Scraper
       if title != ''
         link = row.css("td.tableTitle a").attribute('href').text
         TopTenAnime::Anime.new(title,rank,link)
+        #binding.pry
       end
     end
     #binding.pry

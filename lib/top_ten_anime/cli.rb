@@ -19,18 +19,12 @@ class TopTenAnime::CLI
     list_anime_ranks
     puts ""
     puts "What anime would you like more information on? From 1-10"
-    input = gets.strip.to_i 
+    input = gets.strip.to_i
     if input < 11 && input > 0
-      # is this input valid?
-      # what do we do if the input is valid/invalid
-     # list_anime_ranks
       puts TopTenAnime::Anime.all[input - 1].title
     TopTenAnime::Scraper.get_synopsis(TopTenAnime::Anime.all[input - 1].link) 
     else
       view_again?
-      #is the input valid?
-      # what do we do if it's valid/invalid?
-  # binding.pry
   end 
     
     puts "" 

@@ -32,8 +32,11 @@ class TopTenAnime::CLI
    
     puts ""
     puts "Would you like to see another anime? Enter Y or N"
-
-    input = gets.strip.downcase
+    view_again?
+    end
+    
+    def view_again?
+       input = gets.strip.downcase
     if input == "y"
       get_user_anime 
     elsif input == "n"
@@ -42,7 +45,9 @@ class TopTenAnime::CLI
       exit
     else
       puts ""
-      puts "Sorry, I don't quite understand that answer."
+      puts "Sorry, I don't quite understand that answer." 
+      puts "Would you like to see another anime? Enter Y or N"
+      view_again?
       end
     end 
  end 

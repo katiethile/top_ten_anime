@@ -9,10 +9,8 @@ class TopTenAnime::Scraper
       if title != ''
         link = row.css("td.tableTitle a").attribute('href').text
         TopTenAnime::Anime.new(title,rank,link)
-        #binding.pry 
       end
     end
-    #binding.pry
   end
   
   def self.get_synopsis(link)
@@ -27,8 +25,3 @@ class TopTenAnime::Scraper
     puts website.css("section.pure-g").text.strip#.gsub!(/(\r\n|\r|\n)/, "") 
   end
 end
-
-#TopTenAnime::Anime.all 
-#TopTenAnime::Anime.all[1]
-#TopTenAnime::Anime.all[0].link
-#.gsub!(/(\r\n|\r|\n)/, "")

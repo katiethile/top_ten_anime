@@ -22,6 +22,6 @@ class TopTenAnime::Scraper
   def self.get_reviews(link)
     url = "https://www.anime-planet.com#{link}" + "/reviews"
     website = Nokogiri::HTML(open(url))
-    puts website.css("section.pure-g").text.strip#.gsub!(/(\r\n|\r|\n)/, "") 
+    puts website.css("section.pure-g").text.strip
   end
 end

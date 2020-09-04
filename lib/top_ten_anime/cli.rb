@@ -12,7 +12,7 @@ class TopTenAnime::CLI
   end 
     
   def list_anime_ranks
-    TopTenAnime::Anime.all.each_with_index{ |obj,index| puts "#{obj.rank}. #{obj.title}" if index < 10}  
+    TopTenAnime::Anime.top_ten.each_with_index{ |obj| puts "#{obj.rank}. #{obj.title}"}  
   end
   
   def get_user_anime

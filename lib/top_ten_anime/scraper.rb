@@ -3,7 +3,7 @@ class TopTenAnime::Scraper
     url = "https://www.anime-planet.com/anime/top-anime"
     website = Nokogiri::HTML(open(url))
     animes = website.css("tr")
-    animes.collect do |row|
+    animes.each do |row|
       rank = row.css("td.tableRank").text
       title = row.css("td.tableTitle").text
       if title != ''

@@ -6,3 +6,4 @@ require_relative "./top_ten_anime/anime"
 require 'nokogiri'
 require 'open-uri'
 require 'pry'
+require 'colorize'

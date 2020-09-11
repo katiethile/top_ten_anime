@@ -8,7 +8,7 @@ class TopTenAnime::CLI
   
   def enter
     puts ""
-    puts "The top 10 anime of all time:".yellow
+    puts "The top 10 anime of all time:".light_yellow
   end 
     
   def list_anime_ranks
@@ -28,7 +28,7 @@ class TopTenAnime::CLI
   end 
     
     puts "" 
-    puts "What anime would you like to view reviews on?".light_magenta
+    puts "What anime would you like to view reviews on? Enter 1-10".light_magenta
     list_anime_ranks
     input = gets.strip.to_i
     if input < 11 && input > 0 
@@ -49,7 +49,7 @@ class TopTenAnime::CLI
       get_user_anime 
     elsif input == "n"
       puts ""
-      puts "Thank you! See you next time!".green
+      puts "Thank you! See you next time!".light_green
       exit
     else
       puts ""

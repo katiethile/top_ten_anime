@@ -1,6 +1,6 @@
-# TopTenAnime
+## TopTenAnime
 
-This is a CLI app designed to see the top ten anime in the anime-planet.com website, also able to check their sypnosis and user reviews when inputting what anime the user would like more information on!
+This is a Command Line Interface (CLI) app designed to see the top 10 anime in the anime-planet.com website. Users are also able to check anime sypnosis and user reviews when inputting what anime the user would like more information on!
 
 ## Installation
 
@@ -18,22 +18,23 @@ Or install it yourself as:
 
     $ gem install top_ten_anime
 
+cd into top_ten_anime 
+
 ## Usage
 
 User starts/enters app 
--prints greeting
--gets data from My Anime List website
--prints top 10 list of anime of all time (current)
+1. Greeting is printed out for user to see upon entering
+2. Prints top 10 list of anime of all time (current)
 
 User decides next action 
--user inputs which # of the top 10 list they want more info about
--retrieve the anime that user wanted more info about
--prints sypnosis data/summary of anime 
--prints reviews of animes
+1. User inputs which # of the top 10 list they want more info about (1-10)
+2. Retrieve the anime that user wanted more info about
+3. Prints sypnosis data/summary of selected anime 
+4. Prints reviews of selected anime
 
 User decides next action 
--user inputs instructions for next action 
--program exits/ends
+1. User inputs instructions for next action -> Wanting to see any more info on any other any OR exit app
+2. Program will list everything from beginning again with all choices, OR exits/ends 
 
 ## Development
 
@@ -51,4 +52,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the TopTenAnime project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'katiethile'/top_ten_anime/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the TopTenAnime project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://www.contributor-covenant.org/).
